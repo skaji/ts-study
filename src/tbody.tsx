@@ -1,7 +1,12 @@
 import * as React from 'react'
+import { Rows } from './data'
 import TR from './tr'
 
-const Component = props => (
+type Props = {
+    rows: Rows,
+}
+
+const Component: React.FC<Props> = props => (
     <tbody>
         {props.rows.map(row => (
             <TR key={row.id} {...row} />

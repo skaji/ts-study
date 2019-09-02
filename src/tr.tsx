@@ -1,9 +1,10 @@
 import * as React from 'react'
+import { Row } from './data'
 
-const Component = props => (
+const Component: React.FC<Row> = props => (
     <tr>
         <th>{props.generation}</th>
-        {props.answers.map((answer, i) => (
+        {props.answers.map((answer: any, i: number) => (
           <td key={i}>{`${answer * 100}%`}</td>
       ))}
     </tr>
