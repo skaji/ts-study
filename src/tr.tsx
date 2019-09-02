@@ -3,7 +3,7 @@ import { Row } from './data'
 
 const Component: React.FC<Row> = props => (
     <tr>
-        <th>{props.generation}</th>
+        <th>{props.age}</th>
         {props.answers.map((answer: any, i: number) => (
           <td key={i}>{`${answer * 100}%`}</td>
       ))}
